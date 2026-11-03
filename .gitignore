@@ -1,0 +1,19 @@
+# 运行时/临时文件
+_sort/
+tpl/
+核对图/
+*.log
+hp_state.txt
+tp_result.txt
+heroes.txt
+
+# 个人配置与截图（不上传）
+3C改建.ini
+3C改建.ini.bak
+英雄5槽.png
+黑暗方作战卡.png
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini

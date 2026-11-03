@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>澄海3C 黑暗方作战卡</title>
+<style>
+  @page { size: A4; margin: 9mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+    background: #eef0f4; color: #1a1d24; padding: 14px;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page {
+    width: 192mm; min-height: 279mm; margin: 0 auto; background: #fff;
+    padding: 9mm 8mm; box-shadow: 0 4px 24px rgba(0,0,0,.12);
+    display: flex; flex-direction: column;
+  }
+  header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 3px solid #b3261e; padding-bottom: 7px; margin-bottom: 11px;
+  }
+  h1 { font-size: 22px; letter-spacing: .5px; }
+  h1 small { font-size: 11px; color: #6b7280; font-weight: 400; margin-left: 8px; letter-spacing: 0; }
+  .core { font-size: 11.5px; color: #b3261e; text-align: right; line-height: 1.55; font-weight: 700; }
+
+  .cols { display: flex; gap: 11px; flex: 1; }
+  .col-l { flex: 1.12; display: flex; flex-direction: column; }
+  .col-r { flex: 1; display: flex; flex-direction: column; }
+
+  h2 {
+    font-size: 12.5px; color: #fff; background: #2b3038;
+    padding: 4px 9px; border-radius: 3px; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  h2 span { font-weight: 400; font-size: 10px; color: #b9bfca; }
+
+  ol.seq { list-style: none; position: relative; }
+  ol.seq::before {
+    content: ""; position: absolute; left: 8px; top: 6px; bottom: 8px;
+    width: 2px; background: #d8dce3;
+  }
+  ol.seq li { position: relative; padding: 0 0 10px 25px; }
+  ol.seq li::before {
+    content: ""; position: absolute; left: 3.5px; top: 4px;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: #fff; border: 2.5px solid #b3261e;
+  }
+  ol.seq li:nth-child(2)::before { border-color: #d99a00; }
+  ol.seq li:nth-child(3)::before { border-color: #6d4bd1; }
+  ol.seq li:nth-child(4)::before { border-color: #1f6fb2; }
+  ol.seq li:nth-child(6)::before { border-color: #3f8f2e; }
+  .t { font-size: 10.5px; font-weight: 700; color: #b3261e; letter-spacing: .3px; }
+  .t.o { color: #d99a00; } .t.p { color: #6d4bd1; } .t.b { color: #1f6fb2; } .t.g { color: #3f8f2e; }
+  .act { font-size: 12.5px; font-weight: 600; margin: 1px 0 2px; }
+  .why { font-size: 10.5px; color: #5b6470; line-height: 1.5; }
+  .why b { color: #b3261e; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  th {
+    background: #f1f3f6; color: #37404d; font-weight: 600;
+    padding: 4px 5px; text-align: left; border-bottom: 1.5px solid #d8dce3; font-size: 10.5px;
+  }
+  td { padding: 4.5px 5px; border-bottom: 1px solid #eceff3; vertical-align: top; line-height: 1.45; }
+  .nw { white-space: nowrap; }
+  td.nw { font-weight: 700; }
+  .k { font-family: Consolas, monospace; background: #fbeceb; color: #b3261e; padding: 0 4px; border-radius: 2px; font-weight: 700; }
+
+  .rules { margin-top: 10px; display: flex; gap: 7px; }
+  .rule {
+    flex: 1; border-left: 3px solid #b3261e; background: #fafbfc;
+    padding: 7px 8px; font-size: 10.5px; line-height: 1.5;
+  }
+  .rule b { display: block; font-size: 11.5px; color: #b3261e; margin-bottom: 2px; }
+
+  .bottom { margin-top: 11px; }
+  .tri { display: flex; gap: 8px; }
+  .ask {
+    flex: 1; border: 1px solid #d8dce3; border-radius: 4px; padding: 8px 9px;
+    background: #fafbfc;
+  }
+  .ask h3 { font-size: 11.5px; color: #2b3038; margin-bottom: 5px; }
+  .ask h3 em { font-style: normal; color: #b3261e; }
+  .ask p { font-size: 10.5px; color: #4b5460; line-height: 1.55; }
+  .ask p b { color: #b3261e; }
+
+  .foot {
+    margin-top: auto; padding-top: 7px; border-top: 1px solid #e3e7ec;
+    font-size: 9.5px; color: #8b93a1; display: flex; justify-content: space-between;
+  }
+  .warn { color: #b3261e; font-weight: 700; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; width: auto; min-height: auto; padding: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>澄海3C · 黑暗方作战卡<small>5 英雄：AM / BMG / BM / TC / ES</small></h1>
+    <div class="core">控制链不断，对面就没有输出<br>先控后打，大招永远最后放</div>
+  </header>
+
+  <div class="cols">
+    <div class="col-l">
+      <h2>团战时序 <span>从进场到守尸</span></h2>
+      <ol class="seq">
+        <li>
+          <div class="t">0.0s　牛头进场</div>
+          <div class="act">匕首闪现进去 → 战争践踏群晕</div>
+          <div class="why">全场唯一能一次控住 5 个人的动作。<b>没匕首别硬进场</b>，走出去先吃一轮技能。</div>
+        </li>
+        <li>
+          <div class="t o">0.3s　小黑补网</div>
+          <div class="act">网住「要回城 / 要放大招」的那个</div>
+          <div class="why">网的价值在<b>打断</b>不在定人。网已经晕住的人是纯浪费。</div>
+        </li>
+        <li>
+          <div class="t p">0.8s　沉默齐甩</div>
+          <div class="act">人手一个沉默权杖，同时丢出去</div>
+          <div class="why">专封：小Y 无敌、KOG 宁静、AM 传送。</div>
+        </li>
+        <li>
+          <div class="t b">1.0s　全员输出</div>
+          <div class="act">剑刃风暴 / 穿梭箭 / 火焰风暴 / 暴风雪</div>
+          <div class="why">这时候才放大招。<b>早一秒都是白给。</b></div>
+        </li>
+        <li>
+          <div class="t">3.0s　牛头第二踩</div>
+          <div class="act">第一个晕快结束，接上第二个</div>
+          <div class="why">中间空 1 秒，小Y 起身变羊，你所有大招断在半路。</div>
+        </li>
+        <li>
+          <div class="t g">倒地　守尸</div>
+          <div class="act">网 → 沉默 → 网 循环</div>
+          <div class="why"><b>专盯小Y</b>（一口奶就能翻盘）；其次是带传送的。</div>
+        </li>
+      </ol>
+
+      <div class="rules">
+        <div class="rule"><b>先控后打</b>大招留到对面被控住再放</div>
+        <div class="rule"><b>别被骗技能</b>对面一两个带传送来骚，不理</div>
+        <div class="rule"><b>不扎堆</b>一发群晕全进去，团灭的是你</div>
+      </div>
+    </div>
+
+    <div class="col-r">
+      <h2>五个英雄干什么</h2>
+      <table>
+        <tr><th style="width:27%">英雄</th><th style="width:15%">位置</th><th>职责</th></tr>
+        <tr><td class="nw">牛头 TC</td><td class="nw">最前</td><td>闪现进场群晕，全场核心。第二踩决定胜负</td></tr>
+        <tr><td class="nw">小黑 ES</td><td class="nw">中后</td><td>网打断 + 吸法师蓝。<b>先网后吸是浪费</b></td></tr>
+        <tr><td class="nw">剑圣 BM</td><td class="nw">侧翼</td><td>绕后切脆皮，风暴等控住再开</td></tr>
+        <tr><td class="nw">血法 BMG</td><td class="nw">后排</td><td>火焰风暴铺地，或吹风先手</td></tr>
+        <tr><td class="nw">大法师 AM</td><td class="nw">最后</td><td>暴风雪覆盖 + 水元素。最容易被抓，站最远</td></tr>
+      </table>
+
+      <h2 style="margin-top:11px">键位速查 <span>技能栏 1~5 格</span></h2>
+      <table>
+        <tr><th style="width:20%">按键</th><th style="width:22%">对应</th><th>小黑 ES</th></tr>
+        <tr><td><span class="k">Q</span></td><td class="nw">技能 1</td><td>网（永远只加 1 级）</td></tr>
+        <tr><td><span class="k">W</span></td><td class="nw">技能 2</td><td>吸蓝（5 级够）</td></tr>
+        <tr><td><span class="k">E</span></td><td class="nw">技能 3</td><td>黑箭（<b>主加满</b>）</td></tr>
+        <tr><td><span class="k">R</span></td><td class="nw">技能 4</td><td>穿梭箭（10/15 级各 1）</td></tr>
+        <tr><td><span class="k">T</span></td><td class="nw">技能 5</td><td>符咒</td></tr>
+      </table>
+
+      <h2 style="margin-top:11px">六个洞 <span>等级到了就进</span></h2>
+      <table>
+        <tr><th style="width:31%">洞</th><th style="width:15%">等级</th><th>掉什么</th></tr>
+        <tr><td class="nw">F 骷髅洞</td><td class="nw">15</td><td>加速手套 + <b>2 本骷髅书</b></td></tr>
+        <tr><td class="nw">A 蜘蛛洞</td><td class="nw">20</td><td>奶酪、棋子</td></tr>
+        <tr><td class="nw">B 恶魔洞</td><td class="nw">30</td><td>光环物品、召唤毁灭守卫</td></tr>
+        <tr><td class="nw">C 狂狼洞</td><td class="nw">40</td><td>领袖之书 + <b>魔免项链</b></td></tr>
+        <tr><td class="nw">E 命运房</td><td class="nw">200 金</td><td>随机：神器 或 毙命</td></tr>
+        <tr><td class="nw">D BOSS 洞</td><td class="nw">集齐旗</td><td>神器（大后期）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="tri">
+      <div class="ask">
+        <h3>开团三问 · 三个都是「是」才打</h3>
+        <p>① 我的<b>晕</b>好了吗？（牛头践踏 CD）<br>
+           ② 对面<b>少人</b>吗？（5 人齐就别碰）<br>
+           ③ 集火能<b>一次放倒</b>吗？不能就别开</p>
+      </div>
+      <div class="ask">
+        <h3>立刻撤的信号</h3>
+        <p>· 第一轮技能<b>没秒掉</b>任何人<br>
+           · 自己的<b>沉默/吹风</b>用光了<br>
+           · 对面小Y<b>还站着</b>（他随时能翻）<br>
+           · 兵线在对面塔下（打完没得拆）</p>
+      </div>
+      <div class="ask">
+        <h3>被先手了怎么办</h3>
+        <p>· 吹风<b>吹自己</b>，在天上无敌等技能过去<br>
+           · 沉默<b>追你的那个</b>，别去救正面<br>
+           · 复活多带 2~3 组，<b>死得起才敢打</b><br>
+           · 团掉对方后，抢空两个商店的复活</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>黑暗打「秒」不打「磨」：抓到就打到底，打不死立刻撤，等下一轮 CD</span>
+    <span class="warn">偷英雄 9000 金，少一块受罚</span>
+    <span>澄海3C · 5.x~7.x 通用</span>
+  </div>
+</div>
+</body>
+</html>

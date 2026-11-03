@@ -1,0 +1,107 @@
+; 澄海3C 改建 配置示例
+; 复制成 3C改建.ini 后，坐标部分按 F8 校准会自动写入，不需要手填。
+
+[cfg]
+; ---- 传送 / 回城 ----
+tp_delay=120                ; 点开传送后等多久再点落点（毫秒）
+tp_skill_slot=1             ; G（技能回城）用的是技能栏第几格
+side=dark                   ; 当前阵营：dark / light
+tp_aim=mouse                ; 传送落点：mouse=点鼠标位置 / base=点小地图基地 / none=只举起
+tp_item_slot=1              ; 哪一格是传送物品（对应 C 键）
+tp_switch_hero=1            ; 传送后要不要自动切英雄
+tp_hero_group=2             ; 传送后按哪个编队键选英雄（0=不用编队方式）
+tp_group_taps=1             ; 编队键按几下：1=只选中 2=选中+视角跟过去
+tp_hero_gap=450             ; 传送落地后等多久（毫秒）
+tp_hero_by=name             ; name=按头像认出英雄 / slot=用固定槽号
+tp_hero_name_dark=niu       ; 黑暗：传送后切哪个英雄（代号）
+tp_to_hero_dark=2           ; 兜底槽号（认不出时用）
+tp_verify=1                 ; 是否验证"真的传出去了"（用编队切人时会自动跳过）
+tp_verify_tries=3           ; 验证最多抓几次帧
+tp_verify_gap=400           ; 每次验证间隔
+
+; ---- 点击方式 ----
+click_method=mouse          ; mouse=物理点击（兼容性最好）/ msg=向窗口投递消息（快但很多游戏不认）
+
+; ---- 物品 / 技能自动补点 ----
+; mouse = 举起后自动点你鼠标所在的位置；none = 只举起，落点自己点
+item_aim1=mouse
+item_aim2=mouse
+item_aim3=mouse
+item_aim4=mouse
+item_aim5=mouse
+item_aim6=mouse
+item_click_gap=130          ; 举起物品后等多久再补点
+
+skill_aim1=mouse
+skill_aim2=mouse
+skill_aim3=mouse
+skill_aim4=mouse
+skill_aim5=mouse
+skill_click_gap=130
+
+; ---- 闪现连招（空格）----
+blink_item_slot=6           ; 匕首在第几格
+blink_stomp_skill=2         ; 闪现后接技能栏第几格（0=只闪现不接技能）
+blink_hero_slot=4           ; 牛头在第几个头像槽
+blink_switch_hero=1         ; 连招前要不要先切到牛头
+blink_pre_gap=120           ; 切人后等多久
+blink_dagger_gap=80         ; 点开匕首后等多久
+blink_land_gap=160          ; 闪现落地后等多久再按技能（踩空了就加大）
+
+; ---- 英雄切换 ----
+hero_switch=tab             ; tab=按 Tab 循环 / fkey=发 F1F2F3
+hero_team_key=1             ; 反向切换时先按哪个编队键
+hero_tab_delay=70           ; 连发 Tab 的间隔
+hero_tap_delay=200          ; fkey 模式两次按键间隔
+hero_pre_gap=150            ; 切人前等多久
+hero_center=click           ; click=双击头像兜底居中 / key=只用按键
+hero_count=5                ; 你有几个英雄
+
+; ---- 物品整理 ----
+sort_click=right            ; right=右键拿起放下 / left=左键 / drag=左键拖拽
+sort_gap=260                ; 拿起后等多久放下
+
+; ---- 其他 ----
+mbutton_hold=1              ; 鼠标中键 = H（保持原位）
+auto_heal=1                 ; 预留：自动加血（当前默认关闭热键）
+heal_hero_slot=1            ; 加血英雄在第几槽
+heal_skill_slot=1           ; 加血技能在第几格
+heal_threshold=60           ; 血量低于多少才加
+heal_gap=160
+
+; 物品/英雄代号（给识别用，纯 ASCII）
+herokey1=shengqi
+herokey2=bloodmage
+herokey3=blademaster
+herokey4=niu
+herokey5=xiaohei
+
+itemkey1=chuansong
+itemkey2=chenmo
+itemkey3=chuifeng
+itemkey4=xuebang
+itemkey5=fuhuo
+itemkey6=lanbang
+
+; ---- 坐标 ----
+; 下面这些由 F8 校准自动写入，不同分辨率数值不同，不要照抄
+[pos]
+; skill1=0,0
+; skill2=0,0
+; skill3=0,0
+; skill4=0,0
+; skill5=0,0
+; item1=0,0
+; item2=0,0
+; item3=0,0
+; item4=0,0
+; item5=0,0
+; item6=0,0
+; item_tp=0,0
+; base_light=0,0
+; base_dark=0,0
+; hero1=0,0
+; hero2=0,0
+; hero3=0,0
+; hero4=0,0
+; hero5=0,0
